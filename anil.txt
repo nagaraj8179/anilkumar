@@ -1,0 +1,41 @@
+*** Settings ***
+Library     SeleniumLibrary
+
+
+*** Variables ***
+${browser}      chrome
+${url}          https://demo.automationtesting.in/Register.html
+
+*** Test Cases ***
+LoginTest
+    open browser    ${url}      ${browser}
+    maximize browser window
+    Select Radio Button     radiooptions    Male
+    sleep   2
+    Select Radio Button     radiooptions    FeMale
+    sleep   2
+    Select Checkbox     id:checkbox1
+    sleep   2
+    Select Checkbox     id:checkbox2
+    Select From List By Label       id:Skills       Android
+    sleep   3
+    Select From List By Value       id:Skills       Art Design
+    sleep   3
+    Select From List By Label       id:country      India
+    sleep   3
+    Select From List By Value       id:country      Japan
+    sleep   3
+    input text       id:firstpassword        Mallela
+    sleep   3
+    input text       id:secondpassword       Nagaraju
+    sleep   2
+    click element    id:submitbtn
+    sleep   2
+
+
+
+
+
+
+
+
